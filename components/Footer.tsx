@@ -1,0 +1,1 @@
+export default function Footer(){return <footer className="footer footer-center bg-blue-950 text-white p-10 mt-16"><aside><p className="text-xl font-bold">SunCart – Summer Essentials Store</p><p>Email: support@suncart.com | Phone: +880 1234-567890</p><p>Facebook • Instagram • LinkedIn</p><p>Privacy Policy | Terms & Conditions</p></aside></footer>}
