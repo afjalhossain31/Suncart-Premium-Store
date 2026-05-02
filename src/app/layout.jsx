@@ -1,9 +1,9 @@
 
 import React from "react";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/NavBar";
 import Footer from "@/components/Footer";
-import Providers from "@/components/Providers";
+import Providers from "@/app/providers";
 
 export const metadata = {
   title: "SunCart",
@@ -12,8 +12,6 @@ export const metadata = {
 
 export default function RootLayout({
   children,
-}: {
-  children;
 }) {
   return (
     <html lang="en">
