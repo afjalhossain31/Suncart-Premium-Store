@@ -9,4 +9,4 @@ export const products = [
   { id: 8, name: "Polarized Sport Sunglasses", brand: "SunShade", price: 35, rating: 4.9, stock: 8, description: "High-performance polarized sunglasses for outdoor adventures.", image: "https://images.unsplash.com/photo-1572635196237-14b3f281503f?q=80&w=800", category: "Accessories" },
   { id: 9, name: "Summer Beach Slippers", brand: "Beachy", price: 20, rating: 4.3, stock: 15, description: "Lightweight and durable slippers designed for sandy beaches and poolside relaxation.", image: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?q=80&w=800", category: "Fashion" }
 ];
-export type Product = typeof products[number];
+export 

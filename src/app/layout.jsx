@@ -1,11 +1,11 @@
-import type { Metadata } from "next";
+
 import React from "react";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Providers from "@/components/Providers";
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "SunCart",
   description: "Summer essentials store",
 };
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children;
 }) {
   return (
     <html lang="en">
