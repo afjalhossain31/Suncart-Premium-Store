@@ -13,30 +13,30 @@ const Tips = () => {
       title: "Stay Hydrated Premium",
       desc: "To match the premium lifestyle of Suncart Store, drink at least 8–10 glasses of mineral-rich water daily. Proper hydration at Suncart Premium Store means keeping your body cool, energized, and your skin glowing for that luxury summer look.",
       icon: <IoWaterOutline size={32} />,
-      className: "md:col-span-2 bg-white shadow-xl hover:shadow-2xl transition-all border-l-4 border-orange-500",
+      className: "md:col-span-2 bg-[#F3F4F6] text-stone-800 shadow-md hover:shadow-xl transition-all border-l-4 border-orange-500",
       accent: "text-orange-500",
     },
     {
       title: "Sun Protection",
-      desc: "Please ensure you apply a broad-spectrum sunscreen with an SPF of 50 or higher prior to outdoor activities. Apply the sunscreen 15 to 20 minutes before sun exposure, and reapply every two hours, especially if you are sweating or spending extended periods outdoors. Remember to cover often overlooked areas such as your ears, neck, and hands. For added protection, consider wearing sunglasses, a hat, and lightweight, long-sleeved clothing to reduce skin exposure to direct sunlight. Limiting outdoor activities during peak hours (10 a.m. to 4 p.m.) can help minimize the risk of sunburn, premature skin aging, and long-term skin damage caused by UV rays. Staying consistent with sun protection habits can significantly improve your skin’s overall health and resilience over time. Even on cloudy days, UV rays can penetrate the skin, so daily protection is essential.",
+      desc: "Apply SPF 50+ sunscreen 20 minutes before heading out. Covering areas like ears and neck, and reapplying every two hours, ensures your skin stays protected and healthy during the brightest summer days.",
       icon: <IoSunnyOutline size={32} />,
       className:
-        "md:col-start-3 md:row-start-1 md:row-span-2 bg-orange-500 text-white",
-      accent: "text-white",
+        "md:col-start-3 md:row-start-1 md:row-span-2 bg-emerald-700 text-white",
+      accent: "text-emerald-200",
     },
     {
       title: "Skincare Routine",
-      desc: "Switch to a lightweight, gel-based moisturizer and gentle cleanser suitable for humid conditions. Avoid heavy creams that can clog pores. Regular cleansing and moisturizing help control excess oil, prevent breakouts, and keep your skin fresh throughout the day.",
+      desc: "Switch to a lightweight, gel-based moisturizer for humid conditions. Regular cleansing help control excess oil and keep your skin fresh throughout the day.",
       icon: <IoLeafOutline size={32} />,
-      className: "md:col-span-1 bg-stone-900 text-orange-50",
-      accent: "text-[#FBA919]",
+      className: "md:col-span-1 bg-white border border-stone-200",
+      accent: "text-green-600",
     },
     {
       title: "Light Fabrics",
-      desc: "Choose breathable fabrics like cotton and linen that allow air circulation and absorb sweat effectively. Loose-fitting clothes help prevent heat rashes and discomfort, keeping you cool and comfortable even during the hottest summer days.",
+      desc: "Choose breathable fabrics like cotton and linen. Loose-fitting clothes help prevent heat rashes and discomfort, keeping you cool even during the hottest days.",
       icon: <IoShirtOutline size={32} />,
-      className: "md:col-span-1 bg-white",
-      accent: "text-orange-500",
+      className: "md:col-span-1 bg-orange-500 text-white shadow-lg",
+      accent: "text-white",
     },
   ];
   return (
@@ -52,6 +52,7 @@ const Tips = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows ">
+
           {tips.map((tip, index) => (
             <div
               key={index}
@@ -74,6 +75,7 @@ const Tips = () => {
 
               <div className="absolute bottom-0 left-0 h-1.5 w-0 bg-orange-500 group-hover:w-full transition-all duration-500" />
             </div>
+
           ))}
         </div>
       </div>

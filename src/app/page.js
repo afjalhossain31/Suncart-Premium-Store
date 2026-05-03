@@ -8,10 +8,9 @@ export default async function Home() {
   return (
     <>
       <HeroSlider />
+      <Brands />
       <PopularProducts />
       <Tips />
-      <AllProducts />
-      <Brands />
     </>
   );
 }

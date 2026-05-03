@@ -9,6 +9,7 @@ const ProductCard = async ({ product, params }) => {
   // console.log(productId, "Card");
 
   return (
+
     <div className="group relative bg-white rounded-xl p-4 border border-[#E8E4D8]/60 transition-all duration-500 hover:shadow-[0_30px_60px_-15px_rgba(253,108,23,0.15)] hover:border-orange-500/30 flex flex-col h-full">
       <div className="relative aspect-square overflow-hidden rounded-xl bg-[#F7F7F2] shrink-0">
         <Image
@@ -48,6 +49,7 @@ const ProductCard = async ({ product, params }) => {
         <h3 className="text-xl antialiased font-serif text-stone-900 leading-tight mb-4 min-h-[3.5rem] line-clamp-2 transition-colors group-hover:text-orange-500">
           {name}
         </h3>
+
 
         <div className="flex items-center justify-between border-t border-[#E8E4D8]/40 pt-4 mt-auto">
           <div className="flex flex-col">

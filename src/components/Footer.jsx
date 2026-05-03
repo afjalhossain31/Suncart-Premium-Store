@@ -25,25 +25,24 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-3 mb-4">
               <span className="text-3xl font-bold font-serif text-amber-50 tracking-tight">
-                Suncart <span className="text-orange-500 text-4xl">.</span>
+                Suncart Premium Store 
               </span>
             </div>
             <p className="text-amber-50/70 mb-6 leading-relaxed">
-              Your tropical paradise for summer essentials. Curated collections
-              that bring the warmth of endless summer days to your doorstep.
+              Where style meets sunshine. Explore curated collections inspired by the joy and warmth of endless summer moments.
             </p>
             <div className="space-y-3">
               <div className="flex items-center gap-3 text-amber-50/60">
                 <IoMailOutline className="text-lg text-orange-500" />
-                <span className="text-sm">hello@Suncart.com</span>
+                <span className="text-sm">Suncartpremiumstore@gmail.com</span>
               </div>
               <div className="flex items-center gap-3 text-amber-50/60">
                 <IoCallOutline className="text-lg text-orange-500" />
-                <span className="text-sm">+1 (555) 123-4567</span>
+                <span className="text-sm">+8 (000) 123-8888</span>
               </div>
               <div className="flex items-center gap-3 text-amber-50/60">
                 <IoLocationOutline className="text-lg text-orange-500" />
-                <span className="text-sm">Miami Beach, FL 33139</span>
+                <span className="text-sm">Mirpur-1, 98/1, Branch</span>
               </div>
             </div>
           </div>
@@ -83,7 +82,7 @@ export default function Footer() {
               Follow Us
             </h4>
             <p className="text-amber-50/70 mb-6">
-              Stay connected for the latest summer trends and tropical vibes.
+              Join us for the latest styles, updates, and a touch of tropical living.
             </p>
 
             <div className="flex items-center gap-4 mb-8">
@@ -110,7 +109,7 @@ export default function Footer() {
               <div className="flex gap-2">
                 <input
                   type="email"
-                  placeholder="Your email"
+                  placeholder="Enter Your email"
                   className="flex-1 px-4 py-2.5 bg-amber-50/10 border border-amber-50/20 rounded-full text-amber-50 placeholder:text-amber-50/40 focus:border-amber-500 focus:outline-none transition-colors"
                 />
                 <button className="px-5 py-2.5 rounded-full border-2 border-orange-500 bg-orange-500 text-stone-50 font-bold hover:shadow-[0_8px_24px_rgba(245,158,11,0.3)] transition-all active:scale-95">

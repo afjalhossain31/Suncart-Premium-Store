@@ -9,8 +9,8 @@ import {
   IoPersonAdd,
   IoMenu,
   IoClose,
-} 
-from "react-icons/io5";
+}
+  from "react-icons/io5";
 import { Avatar, Dropdown, Label } from "@heroui/react";
 import { ArrowRightFromSquare, Gear, Person } from "@gravity-ui/icons";
 import { authClient } from "../lib/auth-client";
@@ -35,11 +35,12 @@ const NavBar = () => {
     <div className="bg-orange-50 shadow-sm sticky top-0 z-50">
       <div className="container mx-auto">
         <div className="flex items-center justify-between px-4 md:px-0 h-20">
+
           <div className="flex items-center gap-2">
             <Link href={"/"}>
 
               <span className="text-2xl font-bold font-serif text-stone-900 tracking-tight ">
-                Suncart Premium Store 
+                Suncart Premium Store
               </span>
             </Link>
           </div>
@@ -51,17 +52,11 @@ const NavBar = () => {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className={`relative flex items-center gap-2 text-base font-bold transition-all duration-300 uppercase ${
-                    isActive
-                      ? "text-orange-600"
+                  className={`relative flex items-center gap-2 text-base font-bold transition-all duration-300 uppercase ${isActive
+                      ? "text-orange-500"
                       : "text-stone-900 hover:text-orange-500"
-                  }`}
-                >
-                  <span
-                    className={`w-1.5 h-1.5 rounded-full bg-orange-600 transition-all duration-300 ${
-                      isActive ? "opacity-100 scale-100" : "opacity-0 scale-0"
                     }`}
-                  />
+                >
                   {link.name}
                 </Link>
               );
@@ -75,6 +70,7 @@ const NavBar = () => {
               <IoCartOutline className="text-2xl" />
             </button>
 
+            {/* User Dropdown */}
             {user && (
               <Dropdown placement="bottom">
                 <Dropdown.Trigger className="flex items-center justify-center rounded-full outline-none shrink-0">
@@ -165,7 +161,7 @@ const NavBar = () => {
                 </Link>
                 <Link
                   href={"/register"}
-                  className="flex justify-center items-center gap-2 px-8 py-2.5 rounded-full border-2 border-orange-500 bg-orange-500 text-stone-50 font-bold hover:shadow-[0_8px_24px_rgba(245,158,11,0.3)] transition-all active:scale-95"
+                  className="flex justify-center items-center gap-2 px-8 py-2.5 rounded-full border-2 border-orange-500  text-stone-900 font-bold hover:shadow-[0_8px_24px_rgba(245,158,11,0.3)] transition-all active:scale-95"
                 >
                   Register
                 </Link>
@@ -191,11 +187,10 @@ const NavBar = () => {
                     key={link.name}
                     href={link.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className={`text-xl font-bold uppercase transition-all duration-300 ${
-                      isActive
+                    className={`text-xl font-bold uppercase transition-all duration-300 ${isActive
                         ? "text-orange-600"
                         : "text-stone-900 hover:text-orange-500"
-                    }`}
+                      }`}
                   >
                     {link.name}
                   </Link>
