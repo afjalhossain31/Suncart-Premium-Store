@@ -22,7 +22,7 @@ const NavBar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const userData = useSession();
-  const user = userData.data?.user;
+  const user = userData.data?.session?.user;
   const router = useRouter();
   const pathname = usePathname();
 
@@ -135,8 +135,7 @@ const NavBar = () => {
                       <div
                         onClick={async () => {
                           await authClient.signOut();
-                          router.push("/login");
-                          router.refresh();
+                          window.location.href = "/login";
                         }}
                         className="flex w-full items-center justify-between gap-2"
                       >

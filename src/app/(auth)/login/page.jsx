@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import {
   IoMailOutline,
   IoLockClosedOutline,
@@ -15,6 +16,9 @@ import toast from "react-hot-toast";
 // This page provides a login form for users to access their accounts. It includes email/password authentication and Google social login, with error handling and user feedback through toast notifications.
 
 const LoginPage = () => {
+  const searchParams = useSearchParams();
+  const redirect = searchParams.get("redirect") || "/my-profile";
+
   const onSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
@@ -30,7 +34,7 @@ const LoginPage = () => {
       toast.error(result.error || "Login failed");
     } else {
       toast.success("Login successful!");
-      window.location.href = "/my-profile";
+      window.location.href = redirect;
     }
   };
 
@@ -164,7 +168,7 @@ const LoginPage = () => {
             <p className="text-stone-900/50 text-sm font-medium">
               Don't have an account?{" "}
               <Link
-                href="/register"
+                href={`/register?redirect=${encodeURIComponent(redirect)}`}
                 className="text-stone-900 font-black hover:text-orange-500 transition-colors underline decoration-orange-500/30 underline-offset-4"
               >
                 Create account

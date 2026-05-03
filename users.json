@@ -23,6 +23,14 @@
       "image": "https://static.vecteezy.com/system/resources/thumbnails/023/009/485/small_2x/abstract-animal-owl-portrait-with-colorful-double-exposure-paint-with-generative-ai-free-photo.jpeg",
       "password": "$2b$10$bUYthUhxZjauAwH86xtRyuvSgAvCrajTIb1zLzcR2/IW7N72///oO",
       "createdAt": "2026-05-03T15:32:37.053Z"
+    },
+    {
+      "id": "5jxr01i97",
+      "email": "example-test@gmail.com",
+      "name": "Afjal Hossain",
+      "image": "https://static.vecteezy.com/system/resources/thumbnails/023/009/485/small_2x/abstract-animal-owl-portrait-with-colorful-double-exposure-paint-with-generative-ai-free-photo.jpeg",
+      "password": "$2b$10$279Y9Hv8p3CHLLLgvvRE5uZXHm6lLNcMGouSHI/aXKIk3wAjEtoCC",
+      "createdAt": "2026-05-03T16:04:45.399Z"
     }
   ]
 }
