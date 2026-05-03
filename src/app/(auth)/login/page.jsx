@@ -8,7 +8,10 @@ import {
   IoAlertCircleOutline,
 } from "react-icons/io5";
 import { authClient } from "../../../lib/auth-client";
-import { FieldError, Form, Input, TextField, toast } from "@heroui/react";
+import { FieldError, Form, Input, TextField } from "@heroui/react";
+import toast from "react-hot-toast";
+
+
 // This page provides a login form for users to access their accounts. It includes email/password authentication and Google social login, with error handling and user feedback through toast notifications.
 
 const LoginPage = () => {
@@ -18,29 +21,25 @@ const LoginPage = () => {
     const email = formData.get("email");
     const password = formData.get("password");
 
-    const { data, error } = await authClient.signIn.email({
+    const result = await authClient.signIn({
       email: email,
       password: password,
-      callbackURL: "/",
     });
 
-    if (error) {
-      toast.danger(error.message, {
-        actionProps: {
-          children: "Remove",
-          variant: "danger",
-        },
-        description: "Please check your credentials and try again.",
-        indicator: <IoAlertCircleOutline size={20} />,
-      });
+    if (result.error) {
+      toast.error(result.error || "Login failed");
+    } else {
+      toast.success("Login successful!");
+      window.location.href = "/my-profile";
     }
   };
 
-  const signIn = async () => {
-    await authClient.signIn.social({
-      provider: "google",
-    });
-  };
+  // Google sign-in disabled for now - using simple auth system
+  // const signIn = async () => {
+  //   await authClient.signIn.social({
+  //     provider: "google",
+  //   });
+  // };
 
   return (
     <div className="min-h-[calc(100vh-80px)] bg-stone-50 flex items-center justify-center px-4 py-12">
@@ -126,7 +125,8 @@ const LoginPage = () => {
             </button>
           </Form>
 
-          <div className="relative my-8">
+          {/* Google sign-in disabled for now - using simple auth system */}
+          {/* <div className="relative my-8">
             <div className="absolute inset-0 flex items-center">
               <div className="w-full border-t border-stone-100"></div>
             </div>
@@ -158,7 +158,7 @@ const LoginPage = () => {
               />
             </svg>
             Continue with Google
-          </button>
+          </button> */}
 
           <div className="mt-8 text-center">
             <p className="text-stone-900/50 text-sm font-medium">

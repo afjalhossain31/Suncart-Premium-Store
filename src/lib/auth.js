@@ -1,34 +1,22 @@
 import { betterAuth } from "better-auth";
-import { MongoClient } from "mongodb";
-import { mongodbAdapter } from "better-auth/adapters/mongodb";
-import { dash, sentinel } from "@better-auth/infra";
-import { organization } from "better-auth/plugins";
+import { drizzleAdapter } from "better-auth/adapters/drizzle";
+import { drizzle } from "drizzle-orm/better-sqlite3";
+import Database from "better-sqlite3";
 
-if (!process.env.MONGO_URI) {
-  throw new Error("MONGO_URI is not defined in .env file");
-}
-
-const client = new MongoClient(process.env.MONGO_URI);
-const db = client.db("suncart-auth");
+// Initialize the SQLite database
+const sqlite = new Database("./auth.db");
+const db = drizzle(sqlite);
 
 export const auth = betterAuth({
-  trustedOrigins: ["http://localhost:3000", "https://suncart-store.vercel.app"],
+  baseURL: process.env.BETTER_AUTH_URL || "http://localhost:3000",
+  database: drizzleAdapter(db),
   emailAndPassword: {
     enabled: true,
   },
   socialProviders: {
     google: {
-      clientId: process.env.GOOGLE_CLIENT_ID,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+      clientId: process.env.GOOGLE_CLIENT_ID || "dummy",
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET || "dummy",
     },
   },
-  database: mongodbAdapter(db, {
-    // Optional: if you don't provide a client, database transactions won't be enabled.
-    client,
-  }),
-  plugins: [
-    dash(),
-    sentinel(),
-    organization()
-  ],
 });

@@ -14,10 +14,9 @@ import {
   FieldError,
   Form,
   Input,
-  InputGroup,
   TextField,
-  toast,
 } from "@heroui/react";
+import toast from "react-hot-toast";
 import { authClient } from "../../../lib/auth-client";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -35,34 +34,23 @@ const RegisterPage = () => {
     const password = formData.get("password");
     const photo = formData.get("photo");
 
-    const { data, error } = await authClient.signUp.email({
+    const result = await authClient.signUp({
       name,
       email,
       password,
       image: photo,
     });
 
-    if (error) {
-      toast.danger(error.message, {
-        actionProps: {
-          children: "Remove",
-          variant: "danger",
-        },
-        description:
-          "Something went wrong during registration. Please try again.",
-        indicator: <IoAlertCircleOutline size={20} />,
-      });
-    }
-    const logOut = async () => {
-      await authClient.signOut();
-      router.push("/login");
-    };
-    if (!error) {
-      toast.success("Registration successful! Please login your account now.");
-      logOut();
+    if (result.error) {
+      toast.error(result.error || "Registration failed");
     }
 
-    console.log(data, error, "--- Sign Up Response ---");
+    if (!result.error) {
+      toast.success("Registration successful! Redirecting...");
+      router.push("/my-profile");
+    }
+
+    console.log(result, "--- Sign Up Response ---");
   };
 
   return (
@@ -170,32 +158,26 @@ const RegisterPage = () => {
               <label className="text-stone-900 text-xs font-black uppercase tracking-widest ml-1">
                 Password
               </label>
-              <InputGroup className="w-full h-14.5 bg-stone-50 border border-stone-200 rounded-xl focus-within:ring-2 focus-within:ring-orange-500/20 focus-within:border-orange-500 transition-all overflow-hidden flex items-center">
-                <div className="pl-4 text-stone-400">
-                  <IoLockClosedOutline size={20} />
-                </div>
-                <InputGroup.Input
+              <div className="relative flex items-center">
+                <IoLockClosedOutline className="absolute left-4 text-stone-400 size-5 z-10" />
+                <Input
                   name="password"
                   type={isVisible ? "text" : "password"}
                   placeholder="Enter a strong password"
-                  className="flex-1 px-3 bg-transparent border-none focus:ring-0 text-green-900"
+                  className="w-full pl-11 pr-12 py-4 bg-stone-50 border border-stone-200 rounded-xl text-stone-900 focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all"
                 />
-                <InputGroup.Suffix className="pr-2">
-                  <Button
-                    isIconOnly
-                    size="sm"
-                    variant="light"
-                    onPress={() => setIsVisible(!isVisible)}
-                    className="text-stone-400 hover:text-stone-600"
-                  >
-                    {isVisible ? (
-                      <IoEyeOffOutline size={20} />
-                    ) : (
-                      <IoEyeOutline size={20} />
-                    )}
-                  </Button>
-                </InputGroup.Suffix>
-              </InputGroup>
+                <button
+                  type="button"
+                  onClick={() => setIsVisible(!isVisible)}
+                  className="absolute right-4 text-stone-400 hover:text-stone-600 focus:outline-none z-10"
+                >
+                  {isVisible ? (
+                    <IoEyeOffOutline size={20} />
+                  ) : (
+                    <IoEyeOutline size={20} />
+                  )}
+                </button>
+              </div>
               <FieldError className="text-red-500 text-[10px] font-bold uppercase ml-1" />
             </TextField>
 

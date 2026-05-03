@@ -10,17 +10,17 @@ import {
   IoChevronForward,
   IoSettingsOutline,
 } from "react-icons/io5";
-import { authClient } from "../../../lib/auth-client";
-import { UserUpdate } from "../../../components/UserUpdate";
+import { authClient, useSession } from "../../../lib/auth-client";
+import UserUpdate from "../../../components/UserUpdate";
 
 
 
 const MyProfile = () => {
-  const { data, isPending } = authClient.useSession();
-  const user = data?.user;
-  // console.log(user);
+  const sessionData = useSession();
+  const user = sessionData.data?.session?.user;
+  const isLoading = sessionData.status === "loading";
 
-  if (isPending) {
+  if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <p className="font-serif italic animate-pulse">Loading profile...</p>

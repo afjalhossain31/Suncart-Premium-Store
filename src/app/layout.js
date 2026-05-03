@@ -2,7 +2,7 @@ import { DM_Sans, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
-import { Toast } from "@heroui/react";
+import { Providers } from "./providers";
 
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
@@ -31,14 +31,15 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="light" data-theme="light">
+    <html lang="en" className="light" suppressHydrationWarning>
       <body
-        className={`${dmSans.variable} ${playfair.variable} antialiased bg-background text-foreground`}
+        className={`${dmSans.variable} ${playfair.variable} antialiased font-sans`}
       >
-        <NavBar />
-        <main>{children}</main>
-        <Footer />
-        <Toast.Provider placement="top" />
+        <Providers>
+          <NavBar />
+          <main>{children}</main>
+          <Footer />
+        </Providers>
       </body>
     </html>
   );

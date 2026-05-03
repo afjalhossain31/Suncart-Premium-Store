@@ -13,15 +13,15 @@ import {
   from "react-icons/io5";
 import { Avatar, Dropdown, Label } from "@heroui/react";
 import { ArrowRightFromSquare, Gear, Person } from "@gravity-ui/icons";
-import { authClient } from "../lib/auth-client";
+import { authClient, useSession } from "../lib/auth-client";
 import { useRouter } from "next/navigation";
-import { UserUpdate } from "./UserUpdate";
+import UserUpdate from "./UserUpdate";
 
 const NavBar = () => {
   const [isUserUpdateOpen, setIsUserUpdateOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const userData = authClient.useSession();
+  const userData = useSession();
   const user = userData.data?.user;
   const router = useRouter();
   const pathname = usePathname();

@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": "5s4sdqmx0",
+      "email": "test@example.com",
+      "name": "John Doe",
+      "image": null,
+      "password": "$2b$10$WFf4KVHQ.EN/dK/ymMCFFuc1Seo0dH0gpqOQGi0i15i73D/3D/UHi",
+      "createdAt": "2026-05-03T15:25:34.024Z"
+    },
+    {
+      "id": "68o2ojzzj",
+      "email": "arif@gmail.com",
+      "name": "ariful",
+      "image": "https://static.vecteezy.com/system/resources/thumbnails/023/009/485/small_2x/abstract-animal-owl-portrait-with-colorful-double-exposure-paint-with-generative-ai-free-photo.jpeg",
+      "password": "$2b$10$Mo/WUSGozW8SpVcPMsW7qeYsKW6IL.lpHmseA5GdWtu6xkQ7B80dC",
+      "createdAt": "2026-05-03T15:30:54.388Z"
+    },
+    {
+      "id": "v00k47flh",
+      "email": "afjal12@gmail.com",
+      "name": "Afjal Hossain",
+      "image": "https://static.vecteezy.com/system/resources/thumbnails/023/009/485/small_2x/abstract-animal-owl-portrait-with-colorful-double-exposure-paint-with-generative-ai-free-photo.jpeg",
+      "password": "$2b$10$bUYthUhxZjauAwH86xtRyuvSgAvCrajTIb1zLzcR2/IW7N72///oO",
+      "createdAt": "2026-05-03T15:32:37.053Z"
+    }
+  ]
+}

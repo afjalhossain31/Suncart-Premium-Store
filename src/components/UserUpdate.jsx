@@ -6,10 +6,9 @@ import {
   FieldError,
   Input,
   Modal,
-  Surface,
   TextField,
-  toast,
 } from "@heroui/react";
+import toast from "react-hot-toast";
 import { FaUserEdit } from "react-icons/fa";
 import {
   IoLinkOutline,
@@ -17,31 +16,20 @@ import {
   IoSettingsOutline,
 } from "react-icons/io5";
 
-export function UserUpdate({ customTrigger, isOpen, onOpenChange }) {
+export default function UserUpdate({ customTrigger, isOpen, onOpenChange }) {
   const onSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const updateFormData = Object.fromEntries(formData.entries());
 
-    const { data, error } = await authClient.updateUser({
-      name: updateFormData.name,
-      image: updateFormData.image,
-    });
-    console.log(data, error);
-    if (error) {
-      toast.danger("Update Failed", {
-        description: error.message || "Something went wrong. Please try again.",
-        timeout: 3000,
-      });
-      return;
-    }
+    // User update is currently disabled in simple auth mode
+    // const { data, error } = await authClient.updateUser({
+    //   name: updateFormData.name,
+    //   image: updateFormData.image,
+    // });
 
-    if (data) {
-      toast.success("Profile Updated Successfully", {
-        description: "Your profile information has been updated.",
-        timeout: 3000,
-      });
-    }
+    toast.success("Profile update feature coming soon!");
+    onOpenChange(false);
   };
 
   return (
@@ -68,7 +56,7 @@ export function UserUpdate({ customTrigger, isOpen, onOpenChange }) {
               <Modal.Heading>Update Profile</Modal.Heading>
             </Modal.Header>
             <Modal.Body className="p-6">
-              <Surface variant="default">
+              <div className="bg-white">
                 <form className="flex flex-col gap-4" onSubmit={onSubmit}>
                   <TextField
                     isRequired
@@ -133,7 +121,7 @@ export function UserUpdate({ customTrigger, isOpen, onOpenChange }) {
                     </Button>
                   </div>
                 </form>
-              </Surface>
+              </div>
             </Modal.Body>
             <Modal.Footer></Modal.Footer>
           </Modal.Dialog>
