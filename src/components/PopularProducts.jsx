@@ -26,11 +26,9 @@ const PopularProducts = async () => {
             Popular <span className="text-orange-600">Products</span>
           </h1>
         </div>
-        <div className="animate__animated animate__slideInUp grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="animate__animated animate__slideInUp grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch">
           {popularProducts.map((product) => (
-            <div key={product.id}>
-              <ProductCard product={product} />
-            </div>
+            <ProductCard key={product.id} product={product} />
           ))}
         </div>
       </div>

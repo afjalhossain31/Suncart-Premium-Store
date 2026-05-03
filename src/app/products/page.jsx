@@ -12,7 +12,6 @@ export const metadata = {
 
 const ProductsPage = async () => {
   const products = await getProducts();
-  const { name, brand, price, rating, image, stock, category } = products;
   return (
     <div className="bg-orange-50">
       <div className="container mx-auto px-4 animate__animated animate__slideInUp py-12">
@@ -26,11 +25,9 @@ const ProductsPage = async () => {
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 items-stretch">
           {products.map((product) => (
-            <div key={product.id}>
-              <ProductCard product={product} />
-            </div>
+            <ProductCard key={product.id} product={product} />
           ))}
         </div>
       </div>

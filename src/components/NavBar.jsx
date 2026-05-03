@@ -3,14 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import logo from "../../public/solis-logo.png";
 import {
   IoCartOutline,
   IoLogIn,
   IoPersonAdd,
   IoMenu,
   IoClose,
-} from "react-icons/io5";
+} 
+from "react-icons/io5";
 import { Avatar, Dropdown, Label } from "@heroui/react";
 import { ArrowRightFromSquare, Gear, Person } from "@gravity-ui/icons";
 import { authClient } from "../lib/auth-client";
@@ -37,11 +37,13 @@ const NavBar = () => {
         <div className="flex items-center justify-between px-4 md:px-0 h-20">
           <div className="flex items-center gap-2">
             <Link href={"/"}>
-              <span className="text-2xl font-bold font-serif text-stone-900 tracking-tight">
-                Suncart <span className="text-orange-500 text-3xl">.</span>
+
+              <span className="text-2xl font-bold font-serif text-stone-900 tracking-tight ">
+                Suncart Premium Store 
               </span>
             </Link>
           </div>
+
           <nav className="hidden md:flex items-center gap-10">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
@@ -64,7 +66,10 @@ const NavBar = () => {
                 </Link>
               );
             })}
+
           </nav>
+
+
           <div className="flex items-center justify-center gap-4">
             <button className="flex items-center justify-center w-11 h-11 rounded-full bg-orange-500 text-stone-50 transition-transform active:scale-95 shadow-md cursor-pointer shrink-0">
               <IoCartOutline className="text-2xl" />
@@ -101,6 +106,7 @@ const NavBar = () => {
                       </div>
                     </div>
                   </div>
+
 
                   <Dropdown.Menu>
                     <Dropdown.Item id="profile">
@@ -148,20 +154,19 @@ const NavBar = () => {
               </Dropdown>
             )}
 
+
             {!user && (
               <div className="hidden md:flex gap-4 justify-center items-center">
                 <Link
                   href={"/login"}
                   className="flex justify-center items-center gap-2 px-8 py-2.5 rounded-full border-2 border-orange-500 text-stone-900 font-bold hover:shadow-[0_8px_24px_rgba(245,158,11,0.2)] transition-all active:scale-95"
                 >
-                  <IoLogIn size={24} />
                   Login
                 </Link>
                 <Link
                   href={"/register"}
                   className="flex justify-center items-center gap-2 px-8 py-2.5 rounded-full border-2 border-orange-500 bg-orange-500 text-stone-50 font-bold hover:shadow-[0_8px_24px_rgba(245,158,11,0.3)] transition-all active:scale-95"
                 >
-                  <IoPersonAdd />
                   Register
                 </Link>
               </div>

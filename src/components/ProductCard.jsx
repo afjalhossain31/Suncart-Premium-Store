@@ -9,17 +9,16 @@ const ProductCard = async ({ product, params }) => {
   // console.log(productId, "Card");
 
   return (
-    <div className="group relative bg-white rounded-xl p-4 border border-[#E8E4D8]/60 transition-all duration-500 hover:shadow-[0_30px_60px_-15px_rgba(253,108,23,0.15)] hover:border-orange-500/30">
-      <div className="relative  overflow-hidden rounded-xl bg-[#F7F7F2]">
+    <div className="group relative bg-white rounded-xl p-4 border border-[#E8E4D8]/60 transition-all duration-500 hover:shadow-[0_30px_60px_-15px_rgba(253,108,23,0.15)] hover:border-orange-500/30 flex flex-col h-full">
+      <div className="relative aspect-square overflow-hidden rounded-xl bg-[#F7F7F2] shrink-0">
         <Image
           src={image}
           alt={name}
-          width={1000}
-          height={1000}
-          className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+          fill
+          className="object-cover transition-transform duration-1000 group-hover:scale-110"
         />
 
-        <div className="absolute top-4 left-4 bg-white/70 backdrop-blur-md px-3 py-1 rounded-full border border-white/20">
+        <div className="absolute top-4 left-4 bg-white/70 backdrop-blur-md px-3 py-1 rounded-full border border-white/20 z-10">
           <p className="text-[10px] uppercase tracking-[0.15em] font-black text-stone-900/60">
             {category}
           </p>
@@ -30,18 +29,9 @@ const ProductCard = async ({ product, params }) => {
             Low Stock
           </div>
         )}
-
-        <div className="absolute inset-0 bg-stone-900/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-3">
-          <button className="w-12 h-12 bg-white text-stone-900 rounded-full flex items-center justify-center shadow-xl hover:bg-stone-900 hover:text-white transition-all transform translate-y-8 group-hover:translate-y-0 duration-300">
-            <IoEyeOutline size={20} />
-          </button>
-          <button className="w-12 h-12 bg-orange-500 text-white rounded-full flex items-center justify-center shadow-xl hover:bg-stone-900 transition-all transform translate-y-8 group-hover:translate-y-0 duration-500">
-            <IoCartOutline size={20} />
-          </button>
-        </div>
       </div>
 
-      <div className="px-2 pt-6 pb-2">
+      <div className="px-2 pt-6 pb-2 flex flex-col flex-grow">
         <div className="flex justify-between items-center mb-2">
           <p className="text-[10px] font-black text-orange-500 uppercase tracking-[0.2em]">
             {brand}
@@ -54,11 +44,11 @@ const ProductCard = async ({ product, params }) => {
           </div>
         </div>
 
-        <h3 className="text-xl antialiased font-serif text-stone-900 leading-tight mb-4 min-h-14 line-clamp-2 transition-colors group-hover:text-orange-500">
+        <h3 className="text-xl antialiased font-serif text-stone-900 leading-tight mb-4 min-h-[3.5rem] line-clamp-2 transition-colors group-hover:text-orange-500">
           {name}
         </h3>
 
-        <div className="flex items-center justify-between border-t border-[#E8E4D8]/40 pt-4">
+        <div className="flex items-center justify-between border-t border-[#E8E4D8]/40 pt-4 mt-auto">
           <div className="flex flex-col">
             <span className="text-[10px] text-stone-900/40 font-black uppercase tracking-widest">
               Price

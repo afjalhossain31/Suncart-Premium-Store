@@ -10,7 +10,6 @@ import {
   IoLogoYoutube,
 } from "react-icons/io5";
 
-import logoDark from "../../public/solis-logo-white.png";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();

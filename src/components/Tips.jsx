@@ -10,11 +10,11 @@ import "animate.css";
 const Tips = () => {
   const tips = [
     {
-      title: "Stay Hydrated",
-      desc: "Drink at least 8–10 glasses of water daily to keep your body cool and energized. Proper hydration helps regulate body temperature, improves digestion, and keeps your skin soft, glowing, and less prone to dryness or irritation during hot weather.",
+      title: "Stay Hydrated Premium",
+      desc: "To match the premium lifestyle of Suncart Store, drink at least 8–10 glasses of mineral-rich water daily. Proper hydration at Suncart Premium Store means keeping your body cool, energized, and your skin glowing for that luxury summer look.",
       icon: <IoWaterOutline size={32} />,
-      className: "md:col-span-2 bg-white",
-      accent: "text-blue-500",
+      className: "md:col-span-2 bg-white shadow-xl hover:shadow-2xl transition-all border-l-4 border-orange-500",
+      accent: "text-orange-500",
     },
     {
       title: "Sun Protection",
