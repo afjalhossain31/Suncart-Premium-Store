@@ -1,15 +1,14 @@
 import { betterAuth } from "better-auth";
-import { drizzleAdapter } from "better-auth/adapters/drizzle";
-import { drizzle } from "drizzle-orm/better-sqlite3";
-import Database from "better-sqlite3";
+import { mongoAdapter } from "better-auth/adapters/mongo";
+import { MongoClient } from "mongodb";
 
-// Initialize the SQLite database
-const sqlite = new Database("./auth.db");
-const db = drizzle(sqlite);
+// Initialize MongoDB connection
+const client = new MongoClient(process.env.MONGODB_URI || "mongodb://localhost:27017");
+const db = client.db("suncart-store");
 
 export const auth = betterAuth({
   baseURL: process.env.BETTER_AUTH_URL || "http://localhost:3000",
-  database: drizzleAdapter(db),
+  database: mongoAdapter(db),
   emailAndPassword: {
     enabled: true,
   },

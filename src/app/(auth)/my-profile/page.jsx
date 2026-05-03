@@ -109,9 +109,9 @@ const MyProfile = () => {
             <Card className="border-none shadow-xl rounded-xl bg-orange-500 p-8 text-white relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16 blur-2xl" />
               <div className="relative z-10 space-y-4">
-                <h3 className="text-xl font-serif italic">Solis Rewards</h3>
+                <h3 className="text-xl font-serif italic">Rewards</h3>
                 <div>
-                  <p className="text-4xl font-bold">450</p>
+                  <p className="text-4xl font-bold">250</p>
                   <p className="text-orange-100 text-xs font-black uppercase tracking-widest">
                     Available Points
                   </p>
