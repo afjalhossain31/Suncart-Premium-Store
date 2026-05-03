@@ -33,7 +33,7 @@ const ProductCard = async ({ product, params }) => {
         )}
       </div>
 
-      <div className="px-2 pt-6 pb-2 flex flex-col flex-grow">
+      <div className="px-2 pt-6 pb-2 flex flex-col grow">
         <div className="flex justify-between items-center mb-2">
           <p className="text-[10px] font-black text-orange-500 uppercase tracking-[0.2em]">
             {brand}
@@ -46,7 +46,7 @@ const ProductCard = async ({ product, params }) => {
           </div>
         </div>
 
-        <h3 className="text-xl antialiased font-serif text-stone-900 leading-tight mb-4 min-h-[3.5rem] line-clamp-2 transition-colors group-hover:text-orange-500">
+        <h3 className="text-xl antialiased font-serif text-stone-900 leading-tight mb-4 min-h-14 line-clamp-2 transition-colors group-hover:text-orange-500">
           {name}
         </h3>
 

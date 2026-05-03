@@ -81,29 +81,24 @@ export default function UserUpdate({ customTrigger, isOpen, onOpenChange }) {
                     </div>
                     <FieldError className="text-red-500 text-[10px] font-bold uppercase ml-1" />
                   </TextField>
+
                   <TextField
-                    isRequired
                     name="image"
-                    validate={(v) =>
-                      !v.startsWith("https://")
-                        ? "Please enter a valid url (must start with https://)"
-                        : null
-                    }
                     className="space-y-2"
                   >
                     <label className="text-stone-900 text-xs font-black uppercase tracking-widest ml-1">
-                      Avatar URL
+                      Avatar URL (Optional)
                     </label>
                     <div className="relative flex items-center">
                       <IoLinkOutline className="absolute left-4 text-stone-400 size-5 z-10" />
                       <Input
                         name="image"
-                        placeholder="https://example.com/avatar.jpg"
-                        className="w-full pl-11 pr-4 py-4 bg-stone-50 border border-stone-200 rounded-xl focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all"
+                        placeholder="https://example.com/photo.jpg"
+                        className="w-full pl-11 pr-4 py-4 bg-stone-50 border border-stone-200 rounded-xl text-stone-900 focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all"
                       />
                     </div>
-                    <FieldError className="text-red-500 text-[10px] font-bold uppercase ml-1" />
                   </TextField>
+
                   <div className="flex items-center gap-4">
                     <Button
                       className="bg-white text-stone-700 border border-stone-200 rounded-xl font-bold text-sm flex items-center justify-center gap-3 hover:bg-stone-50 transition-all active:scale-[0.98] px-8 h-12 shadow-sm"

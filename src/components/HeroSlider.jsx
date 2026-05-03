@@ -41,7 +41,7 @@ export default function HeroSlider() {
           speed={1000}
           autoplay={{ delay: 4000, disableOnInteraction: false }}
           pagination={{ clickable: true }}
-          className="w-full aspect-[16/10] md:aspect-[21/9] rounded-3xl overflow-hidden shadow-2xl bg-[#E8E4D8]"
+          className="w-full aspect-16/10 md:aspect-21/9 rounded-3xl overflow-hidden shadow-2xl bg-[#E8E4D8]"
         >
 
 

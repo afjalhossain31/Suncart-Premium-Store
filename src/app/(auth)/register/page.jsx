@@ -35,13 +35,13 @@ const RegisterPage = () => {
     const name = formData.get("name");
     const email = formData.get("email");
     const password = formData.get("password");
-    const photo = formData.get("photo");
+    const image = formData.get("image").trim() || undefined;
 
     const result = await authClient.signUp({
       name,
       email,
       password,
-      image: photo,
+      image,
     });
 
     if (result.error) {
@@ -102,26 +102,20 @@ const RegisterPage = () => {
             </TextField>
 
             <TextField
-              name="photo"
-              validate={(v) =>
-                v && !v.startsWith("https://")
-                  ? "Please enter a valid url (must start with https://)"
-                  : null
-              }
+              name="image"
               className="space-y-2"
             >
               <label className="text-stone-900 text-xs font-black uppercase tracking-widest ml-1">
-                Avatar URL
+                Avatar URL (Optional)
               </label>
               <div className="relative flex items-center">
                 <IoLinkOutline className="absolute left-4 text-stone-400 size-5 z-10" />
                 <Input
-                  name="photo"
+                  name="image"
                   placeholder="https://example.com/avatar.jpg"
                   className="w-full pl-11 pr-4 py-4 bg-stone-50 border border-stone-200 rounded-xl focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all"
                 />
               </div>
-              <FieldError className="text-red-500 text-[10px] font-bold uppercase ml-1" />
             </TextField>
 
             <TextField
