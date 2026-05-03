@@ -15,12 +15,12 @@ const PopularProducts = async () => {
   return (
 
     // Popular Products Section
-    <section className="bg-orange-50 pt-10 pb-24 px-4">
+    <section className="bg-orange-50 pt-5 pb-24 px-4">
       <div className="container mx-auto">
         <div className="py-2">
 
           <div className="flex items-center justify-center">
-            <div className="animate__animated animate__slideInUp flex mb-2 uppercase text-red-600 font-bold w-fit px-2 py-1 border-2 border-red-500 rounded-4xl text-sm ">
+            <div className="animate__animated animate__slideInUp flex mb-2 uppercase text-orange-600 font-bold w-fit px-2 py-1 border-2 border-orange-500 rounded-4xl text-sm ">
               <span>
                 <IoFlameSharp size={21} /> 
               </span>
@@ -28,7 +28,7 @@ const PopularProducts = async () => {
             </div>
           </div>
 
-          <h1 className="animate__animated animate__slideInUp text-center text-2xl md:text-5xl font-bold font-serif antialiased pb-4">
+          <h1 className="animate__animated animate__slideInUp text-center text-2xl md:text-5xl font-bold font-serif antialiased pb-10">
             Popular <span className="text-orange-600">Products</span>
           </h1>
         </div>

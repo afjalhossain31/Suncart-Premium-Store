@@ -9,6 +9,7 @@ import {
 } from "react-icons/io5";
 import { authClient } from "../../../lib/auth-client";
 import { FieldError, Form, Input, TextField, toast } from "@heroui/react";
+// This page provides a login form for users to access their accounts. It includes email/password authentication and Google social login, with error handling and user feedback through toast notifications.
 
 const LoginPage = () => {
   const onSubmit = async (e) => {
@@ -52,6 +53,7 @@ const LoginPage = () => {
             </span>
             <span className="h-0.5 w-8 bg-orange-500/30"></span>
           </div>
+          // Welcome Message
           <h1 className="text-5xl font-serif text-stone-900 tracking-tighter mb-2">
             Welcome Back
           </h1>
@@ -117,9 +119,9 @@ const LoginPage = () => {
 
             <button
               type="submit"
-              className="w-full py-5 bg-stone-900 text-stone-50 rounded-xl font-bold text-xs uppercase tracking-[0.2em] flex items-center justify-center gap-3 hover:bg-orange-500 transition-all active:scale-[0.98] shadow-xl shadow-stone-200 mt-2"
+              className="w-full py-5 bg-green-800 text-stone-50 rounded-xl font-bold text-xs uppercase tracking-[0.2em] flex items-center justify-center gap-3 hover:bg-orange-500 transition-all active:scale-[0.98] shadow-xl shadow-stone-200 mt-2"
             >
-              Secure Login
+              Login
               <IoArrowForward size={18} />
             </button>
           </Form>
@@ -165,7 +167,7 @@ const LoginPage = () => {
                 href="/register"
                 className="text-stone-900 font-black hover:text-orange-500 transition-colors underline decoration-orange-500/30 underline-offset-4"
               >
-                Create one now
+                Create account
               </Link>
             </p>
           </div>

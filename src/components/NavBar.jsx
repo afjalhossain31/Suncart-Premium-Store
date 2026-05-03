@@ -38,8 +38,7 @@ const NavBar = () => {
 
           <div className="flex items-center gap-2">
             <Link href={"/"}>
-
-              <span className="text-2xl font-bold font-serif text-stone-900 tracking-tight ">
+              <span className="text-xl font-bold transition-all duration-300 uppercase text-stone-900 hover:text-orange-500 tracking-widest">
                 Suncart Premium Store
               </span>
             </Link>
@@ -204,15 +203,14 @@ const NavBar = () => {
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="flex justify-center items-center gap-2 w-full py-3.5 rounded-full border-2 border-orange-500 text-stone-900 font-bold active:scale-95 transition-all"
                   >
-                    <IoLogIn size={24} />
                     Login
                   </Link>
                   <Link
                     href={"/register"}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="flex justify-center items-center gap-2 w-full py-3.5 rounded-full border-2 border-orange-500 bg-orange-500 text-stone-50 font-bold active:scale-95 transition-all"
+                    className="flex justify-center items-center gap-2 w-full py-3.5 rounded-full bg-green-800 text-white font-bold active:scale-95 transition-all shadow-lg"
                   >
-                    <IoPersonAdd />
+                    <IoPersonAdd size={20} />
                     Register
                   </Link>
                 </div>

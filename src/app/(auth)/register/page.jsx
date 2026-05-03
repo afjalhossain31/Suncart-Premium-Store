@@ -103,7 +103,7 @@ const RegisterPage = () => {
                 <IoPersonOutline className="absolute left-4 text-stone-400 size-5 z-10" />
                 <Input
                   name="name"
-                  placeholder="John Doe"
+                  placeholder="Afjal Hossain"
                   className="w-full pl-11 pr-4 py-4 bg-stone-50 border border-stone-200 rounded-xl text-stone-900 focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all"
                 />
               </div>
@@ -177,8 +177,8 @@ const RegisterPage = () => {
                 <InputGroup.Input
                   name="password"
                   type={isVisible ? "text" : "password"}
-                  placeholder="enter a strong password"
-                  className="flex-1 px-3 bg-transparent border-none focus:ring-0 text-stone-900"
+                  placeholder="Enter a strong password"
+                  className="flex-1 px-3 bg-transparent border-none focus:ring-0 text-green-900"
                 />
                 <InputGroup.Suffix className="pr-2">
                   <Button
@@ -201,7 +201,7 @@ const RegisterPage = () => {
 
             <button
               type="submit"
-              className="w-full py-5 bg-stone-900 text-white rounded-xl font-bold text-xs uppercase tracking-[0.2em] hover:bg-orange-500 transition-all active:scale-[0.98] shadow-xl"
+              className="w-full py-5 bg-green-800 text-stone-50 rounded-xl font-bold text-xs uppercase tracking-[0.2em] hover:bg-orange-500 transition-all active:scale-[0.98] shadow-xl"
             >
               Join the Store
             </button>
