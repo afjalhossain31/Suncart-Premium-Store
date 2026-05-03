@@ -11,7 +11,7 @@ async function connectDB() {
     const uri = process.env.MONGODB_URI || "mongodb://localhost:27017";
     mongoClient = new MongoClient(uri, {
       maxPoolSize: 10,
-      minPoolSize: 2,
+      minPoolSize: 2, 
     });
     try {
       await mongoClient.connect();

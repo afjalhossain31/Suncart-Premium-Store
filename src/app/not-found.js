@@ -7,8 +7,8 @@ import { IoArrowBackOutline, IoSearchOutline } from "react-icons/io5";
 
 const NotFound = () => {
   return (
-    <div className="min-h-[calc(100vh-80px)] bg-stone-50 flex items-center justify-center px-6 py-20">
-      <div className="container w-full text-center">
+    <div className="relative isolate min-h-[calc(100vh-80px)] bg-stone-50 flex items-center justify-center px-4 sm:px-6 lg:px-8 py-20 overflow-hidden">
+      <div className="w-full max-w-5xl mx-auto text-center">
         <div className="flex items-center justify-center gap-4 mb-8">
           <span className="h-px w-12 bg-stone-900/10"></span>
           <span className="text-orange-500 text-xs font-black uppercase tracking-[0.5em]">
@@ -17,19 +17,19 @@ const NotFound = () => {
           <span className="h-px w-12 bg-stone-900/10"></span>
         </div>
 
-        <h1 className="text-[12rem] md:text-[16rem] font-serif leading-none text-stone-900 tracking-tighter opacity-5 select-none absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 -z-10">
+        <h1 className="pointer-events-none absolute left-1/2 top-1/2 -z-10 select-none -translate-x-1/2 -translate-y-1/2 text-[12rem] font-serif leading-none tracking-tighter text-stone-900 opacity-5 md:text-[16rem]">
           404
         </h1>
 
         <div className="relative z-10">
           <h2 className="text-3xl md:text-5xl font-serif text-stone-900 tracking-tight mb-6">
-            The sun has set on this page.
+            This page is not part of Suncart Preminum Store.
           </h2>
 
           <p className="text-stone-500 text-lg md:text-xl font-medium  mx-auto mb-12">
-            The destination you’re looking for has moved or no longer exists.
+            The link you opened does not exist or has moved.
             <br />
-            Let’s get you back to the summer essentials.
+            Head back to Suncart Preminum Store and keep browsing the collection.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -44,7 +44,7 @@ const NotFound = () => {
 
         <div className="mt-24 pt-8 border-t border-stone-200/60 inline-block px-12">
           <p className="text-stone-400 text-[10px] font-black uppercase tracking-[0.3em]">
-            Solis Men&apos;s Summer Essentials
+            Suncart Preminum Store
           </p>
         </div>
       </div>
