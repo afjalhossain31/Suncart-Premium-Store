@@ -1,37 +1,43 @@
 ﻿[
-  {
+
+    {
     "id": 1,
-    "name": "UV Protection Sunglasses",
-    "brand": "SunShade",
-    "price": 15,
-    "rating": 4.7,
-    "stock": 12,
-    "description": "Stylish UV protection sunglasses perfect for bright summer days.",
-    "image": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&q=80&w=1000",
-    "category": "Accessories"
+    "name": "Cotton Summer T-Shirt",
+    "brand": "CoolWear",
+    "price": 25,
+    "rating": 4.5,
+    "stock": 50,
+    "description": "Premium quality cotton t-shirt for daily summer comfort.",
+    "image": "/product-images/CottonSummerT-Shirt.png",
+    "category": "Clothing"
   },
+
   {
     "id": 2,
     "name": "Men's Cotton Summer T-Shirt",
     "brand": "CoolWear",
-    "price": 12,
+    "price": 122,
     "rating": 4.5,
     "stock": 20,
     "description": "Lightweight breathable cotton t-shirt ideal for hot weather.",
-    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&q=80&w=1000",
+    "image": "/product-images/Men's-cotton.jpeg",
     "category": "Clothing"
   },
+
   {
     "id": 3,
     "name": "Beach Shorts",
     "brand": "WaveRider",
-    "price": 18,
+    "price": 118,
     "rating": 4.6,
     "stock": 15,
     "description": "Comfortable quick-dry beach shorts for swimming and casual wear.",
-    "image": "https://images.unsplash.com/photo-1591195853828-11db59a44f6b?auto=format&fit=crop&q=80&w=1000",
+    "image": "/product-images/Beach Shorts1.webp",
     "category": "Clothing"
   },
+
+
+
   {
     "id": 4,
     "name": "Straw Summer Hat",
@@ -40,9 +46,12 @@
     "rating": 4.4,
     "stock": 10,
     "description": "Classic straw hat to keep you cool and protected from the sun.",
-    "image": "https://images.unsplash.com/photo-1565844442645-ec051c986927?auto=format&fit=crop&q=80&w=1000",
+    "image": "/product-images/Straw Summer Hat.jpeg",
     "category": "Accessories"
   },
+  
+
+
   {
     "id": 5,
     "name": "Men's Flip Flops",
@@ -51,7 +60,7 @@
     "rating": 4.3,
     "stock": 25,
     "description": "Comfortable and lightweight flip flops for beach and casual wear.",
-    "image": "https://images.unsplash.com/photo-1560343090-f0409e92791a?auto=format&fit=crop&q=80&w=1000",
+    "image": "/product-images/FlipFlops.png",
     "category": "Footwear"
   },
   {
@@ -62,7 +71,7 @@
     "rating": 4.5,
     "stock": 18,
     "description": "Breathable sports cap with sweat-wicking fabric for summer workouts.",
-    "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&q=80&w=1000",
+    "image": "/product-images/Cooling Sports.webp",
     "category": "Accessories"
   },
   {
@@ -73,7 +82,7 @@
     "rating": 4.6,
     "stock": 11,
     "description": "Spacious tote bag for carrying beach essentials.",
-    "image": "https://images.unsplash.com/photo-1544816153-12ad5d714481?auto=format&fit=crop&q=80&w=1000",
+    "image": "/product-images/BeachToteBag.jpg",
     "category": "Accessories"
   },
   {
@@ -84,7 +93,7 @@
     "rating": 4.5,
     "stock": 13,
     "description": "Durable and stylish sandals for everyday summer wear.",
-    "image": "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&q=80&w=1000",
+    "image": "/product-images/Men'sSandals.webp",
     "category": "Footwear"
   },
   {
@@ -95,7 +104,41 @@
     "rating": 4.7,
     "stock": 30,
     "description": "Leak-proof water bottle to keep you hydrated all day.",
-    "image": "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&q=80&w=1000",
+    "image": "/product-images/Hydration Water.jpg",
     "category": "Essentials"
+  },
+  {
+    "id": 13,
+    "name": "Men's Flip",
+    "brand": "SunWalk",
+    "price": 15,
+    "rating": 4.2,
+    "stock": 22,
+    "description": "Classic and durable flip flops for the beach.",
+    "image": "/product-images/Men's Flip.webp",
+    "category": "Footwear"
+  },
+  {
+    "id": 14,
+    "name": "Linen Shirt",
+    "brand": "PureCotton",
+    "price": 45,
+    "rating": 4.8,
+    "stock": 10,
+    "description": "Breathable linen shirt for a stylish summer look.",
+    "image": "/product-images/LinenShirt.png",
+    "category": "Clothing"
+  },
+
+  {
+    "id": 15,
+    "name": "UV Protection Sunglasses",
+    "brand": "SunShade",
+    "price": 120,
+    "rating": 4.7,
+    "stock": 12,
+    "description": "Stylish UV protection sunglasses perfect for bright summer days.",
+    "image": "/product-images/UV-protection.webp",
+    "category": "Accessories"
   }
 ]
