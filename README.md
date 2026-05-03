@@ -38,7 +38,7 @@ A modern, fully-featured eCommerce platform for summer products built with **Nex
 
 | Category | Technology |
 |----------|-----------|
-| **Framework** | Next.js 14+ |
+| **Framework** | Next.js |
 | **Frontend** | React , Tailwind CSS, DaisyUI |
 | **Authentication** | Better Auth |
 | **Database** | MongoDB, Better Auth Mongo Adapter |
@@ -105,22 +105,6 @@ public/
 - MongoDB (local or MongoDB Atlas cloud)
 - A Google OAuth application (for social login)
 
-### MongoDB Setup
-
-#### Option 1: Local MongoDB
-```bash
-# Install MongoDB Community Edition (if not already installed)
-# Windows: Download from https://www.mongodb.com/try/download/community
-# macOS: brew install mongodb-community
-# Linux: Follow MongoDB documentation
-
-# Start MongoDB service
-# Windows: mongod
-# macOS: brew services start mongodb-community
-# Linux: sudo systemctl start mongod
-
-# Default connection string: mongodb://localhost:27017
-```
 
 #### Option 2: MongoDB Atlas (Cloud)
 1. Go to [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
@@ -155,26 +139,6 @@ public/
    
    The app will be available at `http://localhost:3000`
 
----
-
-## 📝 Environment Variables
-
-Create a `.env.local` file with the following variables:
-
-```env
-# Better Auth Configuration
-BETTER_AUTH_SECRET=your_secret_key_here
-BETTER_AUTH_URL=http://localhost:3000
-
-# MongoDB Configuration
-MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/suncart-store?retryWrites=true&w=majority
-
-# Google OAuth
-GOOGLE_CLIENT_ID=your_google_client_id
-GOOGLE_CLIENT_SECRET=your_google_client_secret
-```
-
----
 
 ## 🔗 Key Pages
 
@@ -251,19 +215,9 @@ npm start
 
 This project is open source and available under the MIT License.
 
----
-
-## 📧 Support & Contribution
-
-For issues, suggestions, or contributions, please feel free to:
-- Open an issue on GitHub
-- Submit a pull request
-- Contact the development team
-
----
 
 ## 🔗 Links
 
-- **GitHub Repository**: [Add your repo link here]
-- **Live Demo**: [Add your deployment link here]
-- **Issues**: [Add your issues link here]  
+- **GitHub Repository**: [https://github.com/afjalhossain31/Suncart-Premium-Store]
+- **Live Demo**: [(https://suncart-premium-store-by-afjal.vercel.app/)]
+
