@@ -33,8 +33,8 @@ const NavBar = () => {
 
   return (
     <div className="bg-orange-50 shadow-sm sticky top-0 z-50">
-      <div className="container mx-auto">
-        <div className="flex items-center justify-between px-4 md:px-0 h-20">
+      <div className="w-full px-2 sm:px-4 lg:px-6">
+        <div className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between">
 
           <div className="flex items-center gap-2">
             <Link href={"/"}>
