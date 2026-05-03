@@ -1,4 +1,4 @@
-﻿[
+[
 
     {
     "id": 1,
@@ -8,7 +8,7 @@
     "rating": 4.5,
     "stock": 50,
     "description": "Premium quality cotton t-shirt for daily summer comfort.",
-    "image": "/product-images/CottonSummerT-Shirt.png",
+    "image": "/Product-images/CottonSummerT-Shirt.png",
     "category": "Clothing"
   },
 
@@ -20,7 +20,7 @@
     "rating": 4.5,
     "stock": 20,
     "description": "Lightweight breathable cotton t-shirt ideal for hot weather.",
-    "image": "/product-images/Men's-cotton.jpeg",
+    "image": "/Product-images/Men's-cotton.jpeg",
     "category": "Clothing"
   },
 
@@ -32,7 +32,7 @@
     "rating": 4.6,
     "stock": 15,
     "description": "Comfortable quick-dry beach shorts for swimming and casual wear.",
-    "image": "/product-images/Beach Shorts1.webp",
+    "image": "/Product-images/Beach Shorts1.webp",
     "category": "Clothing"
   },
 
@@ -46,7 +46,7 @@
     "rating": 4.4,
     "stock": 10,
     "description": "Classic straw hat to keep you cool and protected from the sun.",
-    "image": "/product-images/Straw Summer Hat.jpeg",
+    "image": "/Product-images/Straw Summer Hat.jpeg",
     "category": "Accessories"
   },
   
@@ -60,7 +60,7 @@
     "rating": 4.3,
     "stock": 25,
     "description": "Comfortable and lightweight flip flops for beach and casual wear.",
-    "image": "/product-images/FlipFlops.png",
+    "image": "/Product-images/FlipFlops.png",
     "category": "Footwear"
   },
   {
@@ -71,7 +71,7 @@
     "rating": 4.5,
     "stock": 18,
     "description": "Breathable sports cap with sweat-wicking fabric for summer workouts.",
-    "image": "/product-images/Cooling Sports.webp",
+    "image": "/Product-images/Cooling Sports.webp",
     "category": "Accessories"
   },
   {
@@ -82,7 +82,7 @@
     "rating": 4.6,
     "stock": 11,
     "description": "Spacious tote bag for carrying beach essentials.",
-    "image": "/product-images/BeachToteBag.jpg",
+    "image": "/Product-images/BeachToteBag.jpg",
     "category": "Accessories"
   },
   {
@@ -93,7 +93,7 @@
     "rating": 4.5,
     "stock": 13,
     "description": "Durable and stylish sandals for everyday summer wear.",
-    "image": "/product-images/Men'sSandals.webp",
+    "image": "/Product-images/Men'sSandals.webp",
     "category": "Footwear"
   },
   {
@@ -104,7 +104,7 @@
     "rating": 4.7,
     "stock": 30,
     "description": "Leak-proof water bottle to keep you hydrated all day.",
-    "image": "/product-images/Hydration Water.jpg",
+    "image": "/Product-images/Hydration Water.jpg",
     "category": "Essentials"
   },
   {
@@ -115,7 +115,7 @@
     "rating": 4.2,
     "stock": 22,
     "description": "Classic and durable flip flops for the beach.",
-    "image": "/product-images/Men's Flip.webp",
+    "image": "/Product-images/Men's Flip.webp",
     "category": "Footwear"
   },
   {
@@ -126,7 +126,7 @@
     "rating": 4.8,
     "stock": 10,
     "description": "Breathable linen shirt for a stylish summer look.",
-    "image": "/product-images/LinenShirt.png",
+    "image": "/Product-images/LinenShirt.png",
     "category": "Clothing"
   },
 
@@ -138,7 +138,7 @@
     "rating": 4.7,
     "stock": 12,
     "description": "Stylish UV protection sunglasses perfect for bright summer days.",
-    "image": "/product-images/UV-protection.webp",
+    "image": "/Product-images/UV-protection.webp",
     "category": "Accessories"
   }
 ]
