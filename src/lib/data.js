@@ -1,11 +1,7 @@
-export const products = [
-  { id: 1, name: "UV Protection Sunglasses", brand: "SunShade", price: 15, rating: 4.7, stock: 10, description: "Stylish UV protection sunglasses perfect for summer outings.", image: "https://images.unsplash.com/photo-1511499767150-a48a237f0083?q=80&w=800", category: "Accessories" },
-  { id: 2, name: "Aloe Vera Sunscreen SPF 50", brand: "GlowCare", price: 22, rating: 4.8, stock: 16, description: "Lightweight sunscreen with aloe vera for daily summer protection.", image: "https://images.unsplash.com/photo-1556228578-8c89e6adf883?q=80&w=800", category: "Skincare" },
-  { id: 3, name: "Beach Straw Hat", brand: "Beachy", price: 18, rating: 4.5, stock: 12, description: "Breathable straw hat for beach trips and sunny afternoons.", image: "https://images.unsplash.com/photo-1529958030586-3aae4ca485ff?q=80&w=800", category: "Fashion" },
-  { id: 4, name: "Summer Floral Shirt", brand: "SunnyFit", price: 29, rating: 4.6, stock: 20, description: "Comfortable floral shirt made for hot weather and casual styling.", image: "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=800", category: "Outfits" },
-  { id: 5, name: "Insulated Water Bottle", brand: "HydroWave", price: 19, rating: 4.9, stock: 25, description: "Keeps drinks cold during long summer days and travel.", image: "https://images.unsplash.com/photo-1602143407151-7111542de6e8?q=80&w=800", category: "Essentials" },
-  { id: 6, name: "Beach Tote Bag", brand: "SeaCarry", price: 24, rating: 4.4, stock: 14, description: "Spacious tote bag for sunscreen, towel, snacks, and beach accessories.", image: "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?q=80&w=800", category: "Accessories" },
-  { id: 7, name: "Cooling Beach Towel", brand: "HydroWave", price: 12, rating: 4.6, stock: 30, description: "Highly absorbent and quick-drying cooling towel for beach and pool.", image: "https://images.unsplash.com/photo-1576426863848-c21f53c60b19?q=80&w=800", category: "Essentials" },
-  { id: 8, name: "Polarized Sport Sunglasses", brand: "SunShade", price: 35, rating: 4.9, stock: 8, description: "High-performance polarized sunglasses for outdoor adventures.", image: "https://images.unsplash.com/photo-1572635196237-14b3f281503f?q=80&w=800", category: "Accessories" },
-  { id: 9, name: "Summer Beach Slippers", brand: "Beachy", price: 20, rating: 4.3, stock: 15, description: "Lightweight and durable slippers designed for sandy beaches and poolside relaxation.", image: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?q=80&w=800", category: "Fashion" }
-];
+export const getProducts = async () => {
+  const res = await fetch("https://suncart-store.vercel.app/data.json", {
+    cache: "no-store",
+  });
+  const data = await res.json();
+  return data;
+};

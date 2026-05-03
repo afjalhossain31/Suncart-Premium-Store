@@ -1,12 +1,14 @@
+/* app/globals.css */
 @import "tailwindcss";
-@plugin "daisyui";
-@import "animate.css";
+@import "@heroui/styles";
 
-body {
-    background-color: #fffaf0;
-    color: #172554;
+:root {
+  /* Override any color variable */
+  --accent: oklch(0.7 0.25 260);
+  --success: oklch(0.65 0.15 155);
 }
 
-.summer-gradient {
-    background: linear-gradient(135deg, #fff7ad, #fb923c, #38bdf8);
+@theme inline {
+  --font-sans: var(--font-dm-sans);
+  --font-serif: var(--font-playfair);
 }

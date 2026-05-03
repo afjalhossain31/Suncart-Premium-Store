@@ -1,4 +1,12 @@
+// app/providers.tsx
 "use client";
-import React from "react";
-import { Toaster } from "react-hot-toast";
-export default function Providers({ children }) { return <>{children}<Toaster position="top-right" /></> }
+
+import { ThemeProvider } from "next-themes";
+
+export function Providers({ children }) {
+  return (
+    <ThemeProvider attribute="class" defaultTheme="light">
+      {children}
+    </ThemeProvider>
+  );
+}
