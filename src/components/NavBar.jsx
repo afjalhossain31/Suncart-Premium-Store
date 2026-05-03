@@ -3,17 +3,17 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <div className="navbar bg-base-100 shadow-sm px-4 md:px-8 sticky top-0 z-50">
+    <div className="navbar bg-white shadow-sm px-4 md:px-8 sticky top-0 z-50">
       <div className="flex-1">
-        <Link href="/" className="text-2xl font-bold text-warning tracking-tighter">
+        <Link href="/" className="text-2xl font-bold text-orange-500 tracking-tighter">
           SunCart
         </Link>
       </div>
       <div className="flex-none gap-4">
-        <div className="hidden md:flex gap-6 mr-4 text-sm font-medium">
-          <Link href="/products" className="hover:text-warning transition-colors">Products</Link>
-          <Link href="/categories" className="hover:text-warning transition-colors">Categories</Link>
-          <Link href="/deals" className="hover:text-warning transition-colors">Deals</Link>
+        <div className="hidden md:flex gap-6 mr-4 text-sm font-semibold text-gray-800">
+          <Link href="/products" className="hover:text-orange-500 transition-colors">Products</Link>
+          <Link href="/categories" className="hover:text-orange-500 transition-colors">Categories</Link>
+          <Link href="/deals" className="hover:text-orange-500 transition-colors">Deals</Link>
         </div>
         <div className="dropdown dropdown-end">
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">

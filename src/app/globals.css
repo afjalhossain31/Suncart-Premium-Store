@@ -1,5 +1,12 @@
 @import "tailwindcss";
 @plugin "daisyui";
 @import "animate.css";
-body{
-    background:#fffaf0;color:#172554}.summer-gradient{background:linear-gradient(135deg,#fff7ad,#fb923c,#38bdf8)}
+
+body {
+    background-color: #fffaf0;
+    color: #172554;
+}
+
+.summer-gradient {
+    background: linear-gradient(135deg, #fff7ad, #fb923c, #38bdf8);
+}
