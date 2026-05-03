@@ -1,7 +1,7 @@
 import { DM_Sans, Playfair_Display } from "next/font/google";
 import "./globals.css";
-import Footer from "@/components/Footer";
-import NavBar from "@/components/NavBar";
+import Footer from "../components/Footer";
+import NavBar from "../components/NavBar";
 import { Toast } from "@heroui/react";
 
 const dmSans = DM_Sans({
@@ -16,7 +16,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata = {
-  title: "Solis - Premium Men's Essentials",
+  title: "Suncart Premium Store",
   description:
     "Discover Solis, where luxury meets leisure. Explore our curated collection of premium men’s seasonal essentials, designed for the modern gentleman who values both style and comfort. Crafted with exceptional materials and timeless design, Solis redefines seasonal wear for the discerning individual.",
   icons: {

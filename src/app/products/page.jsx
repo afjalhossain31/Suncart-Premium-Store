@@ -1,12 +1,12 @@
-import { getProducts } from "@/lib/data";
+import { getProducts } from "../../lib/data";
 import React from "react";
 import Link from "next/link";
 import { IoArrowForwardOutline } from "react-icons/io5";
-import ProductCard from "@/components/ProductCard";
+import ProductCard from "../../components/ProductCard";
 import "animate.css";
 
 export const metadata = {
-  title: "All Products - Solis",
+  title: "All Products - Suncart",
   description: "Explore our full range of summer essentials.",
 };
 

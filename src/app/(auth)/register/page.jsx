@@ -18,7 +18,7 @@ import {
   TextField,
   toast,
 } from "@heroui/react";
-import { authClient } from "@/lib/auth-client";
+import { authClient } from "../../../lib/auth-client";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
@@ -72,7 +72,7 @@ const RegisterPage = () => {
           <div className="flex items-center justify-center gap-2 mb-4">
             <span className="h-0.5 w-8 bg-orange-500/30"></span>
             <span className="text-orange-500 text-xs font-black uppercase tracking-[0.4em]">
-              Solis Summer Shopping
+              Suncart Premium Store
             </span>
             <span className="h-0.5 w-8 bg-orange-500/30"></span>
           </div>
@@ -111,10 +111,9 @@ const RegisterPage = () => {
             </TextField>
 
             <TextField
-              isRequired
               name="photo"
               validate={(v) =>
-                !v.startsWith("https://")
+                v && !v.startsWith("https://")
                   ? "Please enter a valid url (must start with https://)"
                   : null
               }

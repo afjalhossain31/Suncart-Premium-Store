@@ -13,7 +13,7 @@ import {
 } from "react-icons/io5";
 import { Avatar, Dropdown, Label } from "@heroui/react";
 import { ArrowRightFromSquare, Gear, Person } from "@gravity-ui/icons";
-import { authClient } from "@/lib/auth-client";
+import { authClient } from "../lib/auth-client";
 import { useRouter } from "next/navigation";
 import { UserUpdate } from "./UserUpdate";
 
@@ -37,13 +37,9 @@ const NavBar = () => {
         <div className="flex items-center justify-between px-4 md:px-0 h-20">
           <div className="flex items-center gap-2">
             <Link href={"/"}>
-              <Image
-                src={logo}
-                alt="Solis Logo"
-                width={120}
-                height={40}
-                className="w-auto h-auto"
-              />
+              <span className="text-2xl font-bold font-serif text-stone-900 tracking-tight">
+                Suncart <span className="text-orange-500 text-3xl">.</span>
+              </span>
             </Link>
           </div>
           <nav className="hidden md:flex items-center gap-10">

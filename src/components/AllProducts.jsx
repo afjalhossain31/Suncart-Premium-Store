@@ -1,15 +1,19 @@
-import { getProducts } from "@/lib/data";
+import { getProducts } from "../lib/data";
 import React from "react";
 import ProductCard from "./ProductCard";
 import Link from "next/link";
 import { IoArrowForwardOutline } from "react-icons/io5";
 
 const AllProducts = async () => {
-  const products = await getProducts();
-  const allProducts = products.slice(0, 8);
+  const allProducts = await getProducts();
 
-  // console.log(allProducts, "--- All Products ---");
-  const { name, brand, price, rating, image, stock, category } = allProducts[0];
+  if (!allProducts || allProducts.length === 0) {
+    return (
+      <div className="bg-orange-50 py-12 text-center text-gray-500">
+        No luxury products found. Check back later!
+      </div>
+    );
+  }
 
   return (
     <div className="bg-orange-50">

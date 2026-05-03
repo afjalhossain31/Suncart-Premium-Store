@@ -7,7 +7,7 @@ import {
   IoArrowForward,
   IoAlertCircleOutline,
 } from "react-icons/io5";
-import { authClient } from "@/lib/auth-client";
+import { authClient } from "../../../lib/auth-client";
 import { FieldError, Form, Input, TextField, toast } from "@heroui/react";
 
 const LoginPage = () => {
@@ -48,7 +48,7 @@ const LoginPage = () => {
           <div className="flex items-center justify-center gap-2 mb-4">
             <span className="h-0.5 w-8 bg-orange-500/30"></span>
             <span className="text-orange-500 text-xs font-black uppercase tracking-[0.4em]">
-              Solis Summer Shopping
+              Suncart Premium Store
             </span>
             <span className="h-0.5 w-8 bg-orange-500/30"></span>
           </div>

@@ -1,4 +1,4 @@
-import { getProducts } from "@/lib/data";
+import { getProducts } from "../lib/data";
 import React from "react";
 import Marquee from "react-fast-marquee";
 

@@ -1,4 +1,4 @@
-import { getProducts } from "@/lib/data";
+import { getProducts } from "../lib/data";
 import React from "react";
 import { IoFlameSharp } from "react-icons/io5";
 import ProductCard from "./ProductCard";

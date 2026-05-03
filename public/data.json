@@ -1,0 +1,134 @@
+[
+  {
+    "id": 1,
+    "name": "UV Protection Sunglasses",
+    "brand": "SunShade",
+    "price": 15,
+    "rating": 4.7,
+    "stock": 12,
+    "description": "Stylish UV protection sunglasses perfect for bright summer days.",
+    "image": "/product-images/UVProtectionSunglasses.png",
+    "category": "Accessories"
+  },
+  {
+    "id": 2,
+    "name": "Men's Cotton Summer T-Shirt",
+    "brand": "CoolWear",
+    "price": 12,
+    "rating": 4.5,
+    "stock": 20,
+    "description": "Lightweight breathable cotton t-shirt ideal for hot weather.",
+    "image": "/product-images/CottonSummerT-Shirt.png",
+    "category": "Clothing"
+  },
+  {
+    "id": 3,
+    "name": "Beach Shorts",
+    "brand": "WaveRider",
+    "price": 18,
+    "rating": 4.6,
+    "stock": 15,
+    "description": "Comfortable quick-dry beach shorts for swimming and casual wear.",
+    "image": "/product-images/BeachShorts.png",
+    "category": "Clothing"
+  },
+  {
+    "id": 4,
+    "name": "Straw Summer Hat",
+    "brand": "SunGuard",
+    "price": 10,
+    "rating": 4.4,
+    "stock": 10,
+    "description": "Classic straw hat to keep you cool and protected from the sun.",
+    "image": "/product-images/StrawSummerHat.png",
+    "category": "Accessories"
+  },
+  {
+    "id": 5,
+    "name": "Men's Flip Flops",
+    "brand": "EasyStep",
+    "price": 9,
+    "rating": 4.3,
+    "stock": 25,
+    "description": "Comfortable and lightweight flip flops for beach and casual wear.",
+    "image": "/product-images/FlipFlops.png",
+    "category": "Footwear"
+  },
+  {
+    "id": 6,
+    "name": "Cooling Sports Cap",
+    "brand": "ActiveCool",
+    "price": 11,
+    "rating": 4.5,
+    "stock": 18,
+    "description": "Breathable sports cap with sweat-wicking fabric for summer workouts.",
+    "image": "/product-images/CoolingSportsCap.png",
+    "category": "Accessories"
+  },
+  {
+    "id": 7,
+    "name": "Men's Linen Shirt",
+    "brand": "BreezeFit",
+    "price": 22,
+    "rating": 4.8,
+    "stock": 14,
+    "description": "Premium linen shirt designed for maximum airflow and comfort.",
+    "image": "/product-images/LinenShirt.png",
+    "category": "Clothing"
+  },
+  {
+    "id": 8,
+    "name": "Polarized Sunglasses",
+    "brand": "VisionPro",
+    "price": 20,
+    "rating": 4.7,
+    "stock": 9,
+    "description": "High-quality polarized sunglasses for glare-free outdoor experience.",
+    "image": "/product-images/PolarizedSunglasses.png",
+    "category": "Accessories"
+  },
+  {
+    "id": 9,
+    "name": "Men's Tank Top",
+    "brand": "FitFlex",
+    "price": 10,
+    "rating": 4.4,
+    "stock": 22,
+    "description": "Soft and stretchy tank top perfect for gym and hot days.",
+    "image": "/product-images/TankTop.png",
+    "category": "Clothing"
+  },
+  {
+    "id": 10,
+    "name": "Beach Tote Bag",
+    "brand": "CarryWave",
+    "price": 16,
+    "rating": 4.6,
+    "stock": 11,
+    "description": "Spacious tote bag for carrying beach essentials.",
+    "image": "/product-images/BeachToteBag.png",
+    "category": "Accessories"
+  },
+  {
+    "id": 11,
+    "name": "Men's Casual Sandals",
+    "brand": "UrbanWalk",
+    "price": 19,
+    "rating": 4.5,
+    "stock": 13,
+    "description": "Durable and stylish sandals for everyday summer wear.",
+    "image": "/product-images/CasualSandals.png",
+    "category": "Footwear"
+  },
+  {
+    "id": 12,
+    "name": "Hydration Water Bottle",
+    "brand": "HydroMax",
+    "price": 8,
+    "rating": 4.7,
+    "stock": 30,
+    "description": "Leak-proof water bottle to keep you hydrated all day.",
+    "image": "/product-images/WaterBottle.png",
+    "category": "Essentials"
+  }
+]

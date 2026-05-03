@@ -25,13 +25,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <Image
-                src={logoDark}
-                alt="Solis Logo"
-                width={120}
-                height={40}
-                className="w-auto h-auto"
-              />
+              <span className="text-3xl font-bold font-serif text-amber-50 tracking-tight">
+                Suncart <span className="text-orange-500 text-4xl">.</span>
+              </span>
             </div>
             <p className="text-amber-50/70 mb-6 leading-relaxed">
               Your tropical paradise for summer essentials. Curated collections
@@ -40,7 +36,7 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="flex items-center gap-3 text-amber-50/60">
                 <IoMailOutline className="text-lg text-orange-500" />
-                <span className="text-sm">hello@Solis.com</span>
+                <span className="text-sm">hello@Suncart.com</span>
               </div>
               <div className="flex items-center gap-3 text-amber-50/60">
                 <IoCallOutline className="text-lg text-orange-500" />
@@ -129,7 +125,7 @@ export default function Footer() {
         <div className="pt-8 border-t border-amber-50/10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-sm text-amber-50/60 text-center md:text-left">
-              © {currentYear} SOLIS. All rights reserved.
+              © {currentYear} Suncart Premium Store. All rights reserved.
             </p>
             <div className="flex items-center gap-6">
               {["Privacy Policy", "Terms of Service", "Cookie Policy"].map(
