@@ -32,16 +32,19 @@ export default function HeroSlider() {
 
   return (
     <section className="bg-orange-50 pt-6 md:pt-10 pb-4 px-4">
+
       <div className="container mx-auto">
         <Swiper
           modules={[Autoplay, Pagination, EffectFade]}
           effect="fade"
           loop={true}
           speed={1000}
-          autoplay={{ delay: 6000, disableOnInteraction: false }}
+          autoplay={{ delay: 4000, disableOnInteraction: false }}
           pagination={{ clickable: true }}
           className="w-full aspect-[16/10] md:aspect-[21/9] rounded-3xl overflow-hidden shadow-2xl bg-[#E8E4D8]"
         >
+
+
           {slides.map((slide, index) => (
             <SwiperSlide key={index} className="w-full h-full relative">
               <Image
