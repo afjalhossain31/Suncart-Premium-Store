@@ -13,8 +13,8 @@ export const metadata = {
 const ProductsPage = async () => {
   const products = await getProducts();
   return (
-    <div className="bg-orange-50">
-      <div className="container mx-auto px-4 animate__animated animate__slideInUp py-12">
+    <div className="bg-orange-50 px-2 sm:px-4 lg:px-6">
+      <div className="container mx-auto animate__animated animate__slideInUp py-12">
         <div className="flex justify-between items-center">
           <div className="mb-12 border-l-8 border-stone-900 pl-6">
             <h2 className="md:text-5xl text-2xl font-bold font-serif text-stone-900 tracking-tight">

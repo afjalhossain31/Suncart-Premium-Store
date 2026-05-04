@@ -56,7 +56,6 @@ const LoginPage = () => {
             </span>
             <span className="h-0.5 w-8 bg-orange-500/30"></span>
           </div>
-          // Welcome Message
           <h1 className="text-5xl font-serif text-stone-900 tracking-tighter mb-2">
             Welcome Back
           </h1>

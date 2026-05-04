@@ -15,7 +15,7 @@ const PopularProducts = async () => {
   return (
 
     // Popular Products Section
-    <section className="bg-orange-50 pt-5 pb-24 px-4">
+    <section className="bg-orange-50 pt-5 pb-24 px-2 sm:px-4 lg:px-6">
       <div className="container mx-auto">
         <div className="py-2">
 

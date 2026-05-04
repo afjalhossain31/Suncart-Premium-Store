@@ -40,7 +40,7 @@ const Tips = () => {
     },
   ];
   return (
-    <section className="bg-orange-100 py-20 px-4">
+    <section className="bg-orange-100 py-20 px-2 sm:px-4 lg:px-6">
       <div className="container mx-auto animate__animated animate__slideInUp">
         <div className="mb-12 border-l-8 border-stone-900 pl-6">
           <h2 className="md:text-5xl text-2xl font-bold font-serif text-stone-900 tracking-tight">

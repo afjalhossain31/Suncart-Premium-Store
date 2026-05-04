@@ -5,8 +5,8 @@ import { Autoplay, Pagination, EffectFade } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
-import "swiper/css/effect-fade";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function HeroSlider() {
   const slides = [
@@ -31,7 +31,7 @@ export default function HeroSlider() {
   ];
 
   return (
-    <section className="bg-orange-50 pt-6 md:pt-10 pb-4 px-4">
+    <section className="bg-orange-50 pt-6 md:pt-10 pb-4 px-2 sm:px-4 lg:px-6">
 
       <div className="container mx-auto">
         <Swiper
@@ -68,9 +68,11 @@ export default function HeroSlider() {
                     <p className="text-sm md:text-lg text-stone-200 mb-8 max-w-2xl mx-auto hidden md:block">
                       {slide.subtitle}
                     </p>
-                    <button className="px-8 py-4 bg-white text-stone-900 rounded-full font-bold text-sm uppercase tracking-widest hover:bg-orange-500 hover:text-white transition-all transform hover:scale-105 active:scale-95 shadow-xl">
-                      Shop Now
-                    </button>
+                    <Link href="/products">
+                      <button className="px-8 py-4 bg-white text-stone-900 rounded-full font-bold text-sm uppercase tracking-widest hover:bg-orange-500 hover:text-white transition-all transform hover:scale-105 active:scale-95 shadow-xl">
+                        Shop Now
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
