@@ -101,7 +101,7 @@ public/
 ## 🚀 Getting Started
 
 ### Prerequisites
-- Node.js 16+ and npm/yarn
+- Node.js and npm/yarn
 - MongoDB (local or MongoDB Atlas cloud)
 - A Google OAuth application (for social login)
 
@@ -120,7 +120,7 @@ public/
 1. **Clone the repository**
    ```bash
    git clone <repository-url>
-   cd "SunCart Store"
+   cd "SunCart Premium Store"
    ```
 
 2. **Install dependencies**
