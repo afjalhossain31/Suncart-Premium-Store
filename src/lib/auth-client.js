@@ -60,6 +60,36 @@ export const authClient = {
     return { data: null };
   },
 
+  async updateUser(updates) {
+    try {
+      const user = this.getUser();
+      if (!user) {
+        return { error: "No user logged in" };
+      }
+
+      const response = await fetch("/api/auth/simple", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          action: "update-user",
+          email: user.email,
+          updates,
+        }),
+      });
+
+      const json = await response.json();
+      if (!response.ok) throw new Error(json.error || "Update failed");
+      
+      // Update user in localStorage
+      if (json.data) {
+        localStorage.setItem("user", JSON.stringify(json.data));
+      }
+      return json;
+    } catch (error) {
+      return { error: error.message };
+    }
+  },
+
   getUser() {
     if (typeof window === "undefined") return null;
     const user = localStorage.getItem("user");

@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 
 export async function POST(request) {
   try {
-    const { action, email, password, name, image } = await request.json();
+    const { action, email, password, name, image, updates } = await request.json();
 
     if (action === "sign-up") {
       const result = await authAPI.signUp(email, password, name, image);
@@ -15,6 +15,14 @@ export async function POST(request) {
 
     if (action === "sign-in") {
       const result = await authAPI.signIn(email, password);
+      if (result.error) {
+        return NextResponse.json({ error: result.error }, { status: 400 });
+      }
+      return NextResponse.json({ data: result.data });
+    }
+
+    if (action === "update-user") {
+      const result = await authAPI.updateUser(email, updates);
       if (result.error) {
         return NextResponse.json({ error: result.error }, { status: 400 });
       }

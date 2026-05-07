@@ -1,6 +1,6 @@
 "use client";
 
-import { authClient } from "../lib/auth-client";
+import { authClient, useSession } from "../lib/auth-client";
 import {
   Button,
   FieldError,
@@ -17,19 +17,26 @@ import {
 } from "react-icons/io5";
 
 export default function UserUpdate({ customTrigger, isOpen, onOpenChange }) {
+  const { data: session } = useSession();
+  const user = session?.session?.user;
+
   const onSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const updateFormData = Object.fromEntries(formData.entries());
 
-    // User update is currently disabled in simple auth mode
-    // const { data, error } = await authClient.updateUser({
-    //   name: updateFormData.name,
-    //   image: updateFormData.image,
-    // });
+    const updates = {};
+    if (updateFormData.name) updates.name = updateFormData.name;
+    if (updateFormData.image) updates.image = updateFormData.image;
 
-    toast.success("Profile update feature coming soon!");
-    onOpenChange(false);
+    const { data, error } = await authClient.updateUser(updates);
+
+    if (error) {
+      toast.error(error);
+    } else {
+      toast.success("Profile updated successfully!");
+      onOpenChange(false);
+    }
   };
 
   return (
@@ -76,6 +83,7 @@ export default function UserUpdate({ customTrigger, isOpen, onOpenChange }) {
                       <Input
                         name="name"
                         placeholder="John Doe"
+                        defaultValue={user?.name || ""}
                         className="w-full pl-11 pr-4 py-4 bg-stone-50 border border-stone-200 rounded-xl text-stone-900 focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all"
                       />
                     </div>
@@ -94,6 +102,7 @@ export default function UserUpdate({ customTrigger, isOpen, onOpenChange }) {
                       <Input
                         name="image"
                         placeholder="https://example.com/photo.jpg"
+                        defaultValue={user?.image || ""}
                         className="w-full pl-11 pr-4 py-4 bg-stone-50 border border-stone-200 rounded-xl text-stone-900 focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all"
                       />
                     </div>

@@ -31,9 +31,8 @@ export default function HeroSlider() {
   ];
 
   return (
-    <section className="bg-orange-50 pt-6 md:pt-10 pb-4 px-2 sm:px-4 lg:px-6">
-
-      <div className="container mx-auto">
+    <section className="bg-orange-50 pt-6 md:pt-10 pb-4">
+      <div className="container mx-auto max-w-8xl">
         <Swiper
           modules={[Autoplay, Pagination, EffectFade]}
           effect="fade"
@@ -58,6 +57,7 @@ export default function HeroSlider() {
               {/* Overlay Content */}
               <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
                 <div className="px-4 md:px-16 max-w-4xl text-white text-center">
+                  
                   <div className="animate__animated animate__fadeInUp">
                     <span className="inline-block px-8 py-3 bg-orange-500 text-base md:text-xl font-black uppercase tracking-[0.2em] rounded-full mb-6 shadow-[0_10px_20px_-5px_rgba(249,115,22,0.5)] scale-110">
                       {slide.highlight}

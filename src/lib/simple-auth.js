@@ -141,5 +141,55 @@ export const authAPI = {
   getSession(email) {
     // Sessions are handled by Better Auth via MongoDB
     return { data: null };
+  },
+
+  async updateUser(email, updates) {
+    try {
+      const database = await connectDB();
+      const usersCollection = database.collection("users");
+      
+      const user = await usersCollection.findOne({ email });
+      if (!user) {
+        return { error: "User not found" };
+      }
+      
+      // Update user fields
+      const updateFields = {};
+      if (updates.name !== undefined) updateFields.name = updates.name;
+      if (updates.image !== undefined) updateFields.image = updates.image;
+      
+      if (Object.keys(updateFields).length === 0) {
+        return { error: "No fields to update" };
+      }
+      
+      const result = await usersCollection.updateOne(
+        { email },
+        { $set: updateFields }
+      );
+      
+      if (result.matchedCount === 0) {
+        return { error: "User not found" };
+      }
+      
+      // Get updated user
+      const updatedUser = await usersCollection.findOne({ email });
+      return { data: sanitizeUser(updatedUser) };
+    } catch (error) {
+      if (!isMongoConnectionError(error)) {
+        return { error: error.message };
+      }
+
+      // Fallback for local development
+      const userIndex = memoryUsers.findIndex((user) => user.email === email);
+      if (userIndex === -1) {
+        return { error: "User not found" };
+      }
+
+      const user = memoryUsers[userIndex];
+      if (updates.name !== undefined) user.name = updates.name;
+      if (updates.image !== undefined) user.image = updates.image;
+
+      return { data: sanitizeUser(user) };
+    }
   }
 };

@@ -6,8 +6,10 @@ const Brands = async () => {
   const products = await getProducts();
 
   return (
-    <section className="bg-orange-50 py-10 overflow-hidden px-2 sm:px-4 lg:px-6">
-      <div className="container mx-auto mb-8">
+    <section className="bg-orange-50 py-10 overflow-hidden">
+
+
+      <div className="container mx-auto max-w-8xl px-2 sm:px-4 lg:px-6 mb-8">
         <div className="flex flex-col items-center">
           <div className="flex items-center gap-4 mb-4">
             <span className="h-0.5 w-10 bg-orange-500/30"></span>
